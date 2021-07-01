@@ -22,51 +22,55 @@ function computerPlay()
 
 function playRound(playerSelection, computerSelection) {
     
+    if(playerSelection == null)
+    {
+        return "Invalid Selection";
+    }
+
     playerSelection = playerSelection.toLowerCase();
     playerSelection = playerSelection.trim();
 
     if(playerSelection !== 'rock' && playerSelection !== 'paper' && playerSelection !== 'scissors')
     {
-        console.log("Invalid Choice")
-        return;
+        return "Invalid Selection";
     }
     else{
 
         if(playerSelection == "rock" && computerSelection == "rock")
         {
-            console.log("It's a tie, you both chose Rock");
+            return "It's a tie, you both chose Rock";
         }
         else if(playerSelection == "rock" && computerSelection == "paper")
         {
-            console.log("The Computer Wins, Paper covers Rock.");
+            return "The Computer Wins, Paper covers Rock.";
         }
         else if(playerSelection == "rock" && computerSelection == "scissors")
         {
-            console.log("You Win, Rock crushses Scissors.");
+            return "You Win, Rock crushses Scissors.";
         }
         else if(playerSelection == "paper" && computerSelection == "rock")
         {
-            console.log("You Win, Paper covers Rock.");
+            return "You Win, Paper covers Rock.";
         }
         else if(playerSelection == "paper" && computerSelection == "paper")
         {
-            console.log("It's a tie, you both chose paper");
+            return "It's a tie, you both chose paper";
         }
         else if(playerSelection == "paper" && computerSelection == "scissors")
         {
-            console.log("The Computer Wins, Scissors cuts Paper.");
+            return "The Computer Wins, Scissors cuts Paper.";
         }
         else if(playerSelection == "scissors" && computerSelection == "rock")
         {
-            console.log("The Computer Wins, Rock crushses Scissors.");
+            return "The Computer Wins, Rock crushses Scissors.";
         }
         else if(playerSelection == "scissors" && computerSelection == "paper")
         {
-            console.log("You Win, Scissors cuts Paper.");
+            return "You Win, Scissors cuts Paper.";
         }
         else if(playerSelection == "scissors" && computerSelection == "scissors")
         {
-            console.log("It's a tie, you both chose scissors");
+            return "It's a tie, you both chose scissors";
         }
     }
 }
@@ -74,7 +78,8 @@ function playRound(playerSelection, computerSelection) {
 
 for(i = 0; i <10; i++)
 {
-    //console.log(`${i} : ${computerPlay()}`);
+    //return `${i} : ${computerPlay()}`);
 
-    playRound('rock', computerPlay());
+    let playerChoice = prompt("Choose Rock, Paper, or Scissors!")
+    console.log(playRound(playerChoice, computerPlay()));
 }
