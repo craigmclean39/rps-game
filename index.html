@@ -6,21 +6,25 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,700;1,600&display=swap" rel="stylesheet">
     
 </head>
 
-<div><h1>Rock Paper Scissors</h1></div>
+<div id="header"><h1>Rock Paper Scissors</h1></div>
 
-<div>
+<div id = gamebuttons>
     <form>
-        <input type="button" id="rock" value="ROCK">
-        <input type="button" id="paper" value ="PAPER">
-        <input type="button" id="scissors" value = "SCISSORS">
+        <input type="button" class="game-button" id="rock" value="ROCK">
+        <input type="button" class="game-button" id="paper" value ="PAPER">
+        <input type="button" class="game-button" id="scissors" value = "SCISSORS">
     </form>
 </div>
 
-<div id="message-container">Message</div>
-<div id="score-container">Score</div>
+<div id="message-container"></div>
+<div id="score-container"></div>
 
 
 <script src="scripts/rps.js"></script>

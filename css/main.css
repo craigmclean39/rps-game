@@ -1,0 +1,47 @@
+html{
+    font-family: 'Kanit', sans-serif;
+    background-color: #A8D5E2;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+
+    color: #104911;
+    background-color: #f9a620;
+    border-bottom: solid 2px #ffd449;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-bottom: 35px;
+}
+
+#gamebuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    color: #104911;
+    margin-bottom: 35px;
+}
+
+.game-button {
+    border: none;
+    padding: 10px 15px;
+    background-color: #FFD449;
+}
+
+#message-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#score-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
