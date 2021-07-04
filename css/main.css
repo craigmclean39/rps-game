@@ -3,6 +3,10 @@ html{
     background-color: #A8D5E2;
 }
 
+div {
+   /* border: solid 1px black;*/
+}
+
 #header {
     display: flex;
     flex-direction: row;
@@ -17,21 +21,48 @@ html{
     font-weight: bold;
 
     margin-bottom: 35px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
-#gamebuttons {
-    display: flex;
-    flex-direction: row;
+#game-rules {
+    display:flex;
     justify-content: center;
+    margin-bottom: 35px;
+}
 
+#gamebuttons form{
     color: #104911;
     margin-bottom: 35px;
 }
 
+#gamebuttons form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #104911;
+    margin-bottom: 35px;
+}
+
+@media only screen and (min-width: 992px)
+{
+    #gamebuttons form {
+        flex-direction: row;
+    }
+}
+
 .game-button {
-    border: none;
+    border: solid 1px black;
     padding: 10px 15px;
+    margin: 10px;
     background-color: #FFD449;
+}
+
+.game-button:hover {
+
+    background-color: #F9A620;
 }
 
 #message-container {
@@ -44,4 +75,25 @@ html{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+
+#choice-labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.game-text {
+    margin: 10px;
+}
+
+#message-container {
+
+    padding: 10px;
+}
+
+#score-container {
+
+    padding: 10px;
 }

@@ -25,7 +25,9 @@ function playRound(playerSelection, computerSelection) {
     //object to store game results
     //msg is the text message we want displayed to the user
     //winner will be 0 for a tie, 1 if player wins, and 2 if computer wins
-    const gameResults = {msg:"", winner:0};
+    const gameResults = {msg:"", winner:0, cpuDisp:"", playerDisp:""};
+    gameResults.cpuDisp = computerSelection;
+    gameResults.playerDisp = playerSelection;
     
     if(playerSelection == null)
     {
@@ -106,6 +108,10 @@ scissorsBtn.addEventListener('click', function() {PlayGame('scissors')});
 const gameMsg = document.querySelector("#message-container");
 const scoreMsg = document.querySelector("#score-container");
 
+
+const computerChoiceText = document.querySelector("#cpu-choice");
+const playerChoiceText = document.querySelector("#player-choice");
+
 let playerWins = 0;
 let computerWins = 0;
 
@@ -113,7 +119,7 @@ function PlayGame(playerChoice)
 {
     cpuChoice = computerPlay();
     let result = playRound(playerChoice, cpuChoice);
-    gameMsg.textContent = result.msg;
+    
 
     switch(result.winner)
     {
@@ -128,5 +134,25 @@ function PlayGame(playerChoice)
             break;
     }
 
-    scoreMsg.textContent = `Score: Player ${playerWins} Computer ${computerWins}`;
+    gameMsg.textContent = result.msg;
+    computerChoiceText.textContent = "CPU SELECTS " + result.cpuDisp.toUpperCase();
+    playerChoiceText.textContent = "PLAYER SELECTS " + result.playerDisp.toUpperCase();
+
+    if(playerWins != 5 && computerWins != 5)
+    {
+        scoreMsg.textContent = `Score: Player ${playerWins} CPU ${computerWins}`;
+    }
+    else if(playerWins === 5)
+    {
+        scoreMsg.textContent = `YOU WIN!`;
+        playerWins = 0;
+        computerWins = 0;
+    }
+    else if(computerWins === 5)
+    {
+        scoreMsg.textContent = `CPU WINS!`;
+        playerWins = 0;
+        computerWins = 0;
+    }
+    
 }
