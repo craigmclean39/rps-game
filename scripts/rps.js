@@ -57,7 +57,7 @@ function playRound(playerSelection, computerSelection) {
         }
         else if(playerSelection == "rock" && computerSelection == "scissors")
         {
-            gameResults.msg = "You Win, Rock crushses Scissors.";
+            gameResults.msg = "You Win, Rock crushes Scissors.";
             gameResults.winner = 1;
         }
         else if(playerSelection == "paper" && computerSelection == "rock")
@@ -77,7 +77,7 @@ function playRound(playerSelection, computerSelection) {
         }
         else if(playerSelection == "scissors" && computerSelection == "rock")
         {
-            gameResults.msg = "The Computer Wins, Rock crushses Scissors.";
+            gameResults.msg = "The Computer Wins, Rock crushes Scissors.";
             gameResults.winner = 2;
         }
         else if(playerSelection == "scissors" && computerSelection == "paper")
